@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ScoreBoard</title>
+    <style>
+      header nav {
+            float: right; 
+            margin: 10px;
+        }
+        header nav a {
+            padding: 10px;
+            color: #050089;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        header nav a:hover {
+            background: #fff;
+            color: #09264e;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="index2.css"/>
+
+  </head>
+  <body>
+    <header>
+      <h1>CricLife</h1>
+      <nav>
+          <a href="index.html" class="selected">Schedule</a>
+          <a href="fantasy.html">Fantasy</a>
+          <a href="series.html">Series</a>
+          <a href="profile.html" class="profile">Profile</a>
+          <a href="index.html" class="score">last score</a>
+      </nav>
+  </header>
+    <!--Whole Container -->
+    <div class="rca-container rca-margin">
+      
+      <!--Live ScoreBoard -->
+      <div class="rca-row">
+        <!--Widget Inner -->
+        <div class="rca-column-6">
+          <!--Match Series-->
+          <div class="rca-medium-widget rca-padding rca-live-season rca-top-border">
+            <div class="rca-live-label rca-right">MI vs CSK</div>
+            <div class="rca-clear"></div>
+            <div class="rca-padding">       
+              <h3 class="rca-match-title">
+                <a href="/main.html">
+                CSK: 198/4 in 20
+                </a>
+              </h3>
+            </div>
+          </div>
+          <!--Match Schedule Info-->
+          <div class="rca-mini-widget rca-history-info">
+            <div class="rca-row">
+              <span class="rca-col rca-history-title">Match:</span>
+              <span class="rca-col"> Mumbai Indians vs Chennai Super Kings</span>
+            </div>
+            <div class="rca-row">
+              <span class="rca-col rca-history-title">Series:</span>
+              <span class="rca-col"> IPL 2023</span>
+            </div>
+            <div class="rca-row">
+              <span class="rca-col rca-history-title">Date (GMT):</span>
+              <span class="rca-col"> 15th April 2024</span>
+            </div>
+            <div class="rca-row">
+              <span class="rca-col rca-history-title">Venue:</span>
+              <span class="rca-col"> India</span>
+            </div>
+            <div class="rca-row">
+              <span class="rca-col rca-history-title">Match Type:</span>
+              <span class="rca-col"> Twenty20 Cricket Match</span>
+            </div>
+            <div class="rca-row">
+              <span class="rca-col rca-history-title">Toss:</span>
+              <span class="rca-col"> Chennai Super Kings won the toss and chose to bat first</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rca-column-6">
+          <!--Match Series-->
+          <div class="rca-medium-widget rca-top-border ">
+            <ul class="rca-tab-list">
+              <li class="rca-tab-link active" data-tab="tab-41" onclick="showTab(this);">Mumbai Indians</li>
+              <li class="rca-tab-link" data-tab="tab-42" onclick="showTab(this);">Chennai Super Kings</li>
+            </ul>
+            <div id="tab-41" class="rca-tab-content rca-padding active">
+              <div class="rca-batting-score rca-padding">
+                <h3>Mumbai Indians Batting: <strong> 180/6 in 20</strong></h3>
+                <div class="rca-row">
+                  <div class="rca-header rca-table">
+                    <div class="rca-col rca-player">
+                      Batsmen
+                    </div>
+                    <div class="rca-col">
+                      R
+                    </div>
+                    <div class="rca-col">
+                      4s
+                    </div>
+                    <div class="rca-col">
+                      6s
+                    </div>
+                    <div class="rca-col">
+                      SR
+                    </div>
+                  </div>
+                </div>
+                <div class="rca-row">
+                  <div class="rca-table">
+                    <div class="rca-col rca-player">
+                      Rohit Sharma*
+                    </div>
+                    <div class="rca-col">
+                      105 (63)
+                    </div>
+                    <div class="rca-col">
+                      11
+                    </div>
+                    <div class="rca-col">
+                      5
+                    </div>
+                    <div class="rca-col">
+                      166.67
+                    </div>
+                  </div>
+                </div>
+                <div class="rca-row">
+                  <div class="rca-table">
+                    <div class="rca-col rca-player">
+                      Ishan Kishan
+                    </div>
+                    <div class="rca-col">
+                      23 (15)
+                    </div>
+                    <div class="rca-col">
+                      3
+                    </div>
+                    <div class="rca-col">
+                      1
+                    </div>
+                    <div class="rca-col">
+                      153.33
+                    </div>
+                  </div>
+                </div>
+                <div class="rca-clear"></div>
+              </div>
+              <div class="rca-bowling-score rca-padding">
+                <h3>Mumbai Indians Bowling:</h3>
+                <div class="rca-row">
+                  <div class="rca-header rca-table">
+                    <div class="rca-col rca-player">
+                      Bowler
+                    </div>
+                    <div class="rca-col small">
+                      O
+                    </div>
+                    <div class="rca-col small">
+                      M
+                    </div>
+                    <div class="rca-col small">
+                      R
+                    </div>
+                    <div class="rca-col small">
+                      W
+                    </div>
+                    <div class="rca-col small">
+                      Econ
+                    </div>
+                    <div class="rca-col small">
+                      Extras
+                    </div>
+                  </div>
+                </div>
+                <div class="rca-row">
+                  <div class="rca-table">
+                    <div class="rca-col rca-player">
+                      Gerald Coetzee
+                    </div>
+                    <div class="rca-col small">
+                      4
+                    </div>
+                    <div class="rca-col small">
+                      0
+                    </div>
+                    <div class="rca-col small">
+                      35
+                    </div>
+                    <div class="rca-col small">
+                      1
+                    </div>
+                    <div class="rca-col small">
+                      8.75
+                    </div>
+                    <div class="rca-col small">
+                      -
+                    </div>
+                  </div>
+                </div>
+                <div class="rca-row">
+                  <div class="rca-table">
+                    <div class="rca-col rca-player">
+                      Hardik Pandya
+                    </div>
+                    <div class="rca-col small">
+                      3
+                    </div>
+                    <div class="rca-col small">
+                      0
+                    </div>
+                    <div class="rca-col small">
+                      43
+                      <div class="rca-col small">
+                        2
+                      </div>
+                      <div class="rca-col small">
+                        14.33
+                      </div>
+                      <div class="rca-col small">
+                        -
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rca-clear"></div>
+                </div>
+              </div>
+              <div id="tab-42" class="rca-tab-content rca-padding">
+                <div class="rca-batting-score rca-padding">
+                  <h3>Chennai Super Kings Batting: <strong> 198/4 in 20</strong></h3>
+                  <div class="rca-row">
+                    <div class="rca-header rca-table">
+                      <div class="rca-col rca-player">
+                        Batsmen
+                      </div>
+                      <div class="rca-col">
+                        R
+                      </div>
+                      <div class="rca-col">
+                        4s
+                      </div>
+                      <div class="rca-col">
+                        6s
+                      </div>
+                      <div class="rca-col">
+                        SR
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rca-row">
+                    <div class="rca-table">
+                      <div class="rca-col rca-player">
+                        Ruturaj Gaikwad
+                      </div>
+                      <div class="rca-col">
+                        69 (40)
+                      </div>
+                      <div class="rca-col">
+                        5
+                      </div>
+                      <div class="rca-col">
+                        5
+                      </div>
+                      <div class="rca-col">
+                        172.50
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rca-row">
+                    <div class="rca-table">
+                      <div class="rca-col rca-player">
+                        Shivam Dube*
+                      </div>
+                      <div class="rca-col">
+                        66 (38)
+                      </div>
+                      <div class="rca-col">
+                        10
+                      </div>
+                      <div class="rca-col">
+                        2
+                      </div>
+                      <div class="rca-col">
+                        173.68
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rca-clear"></div>
+                </div>
+                <div class="rca-bowling-score rca-padding">
+                  <h3>Chennai Super Kings Bowling:</h3>
+                  <div class="rca-row">
+                    <div class="rca-header rca-table">
+                      <div class="rca-col rca-player">
+                        Bowler
+                      </div>
+                      <div class="rca-col small">
+                        O
+                      </div>
+                      <div class="rca-col small">
+                        M
+                      </div>
+                      <div class="rca-col small">
+                        R
+                      </div>
+                      <div class="rca-col small">
+                        W
+                      </div>
+                      <div class="rca-col small">
+                        Econ
+                      </div>
+                      <div class="rca-col small">
+                        Extras
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rca-row">
+                    <div class="rca-table">
+                      <div class="rca-col rca-player">
+                        Matheesha Pathirana
+                      </div>
+                      <div class="rca-col small">
+                        4
+                      </div>
+                      <div class="rca-col small">
+                        0
+                      </div>
+                      <div class="rca-col small">
+                        28
+                      </div>
+                      <div class="rca-col small">
+                        4
+                      </div>
+                      <div class="rca-col small">
+                        7.00
+                      </div>
+                      <div class="rca-col small">
+                        -
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rca-row">
+                    <div class="rca-table">
+                      <div class="rca-col rca-player">
+                        Tushar Deshpande
+                      </div>
+                      <div class="rca-col small">
+                        4
+                      </div>
+                      <div class="rca-col small">
+                        0
+                      </div>
+                      <div class="rca-col small">
+                        29
+                      </div>
+                      <div class="rca-col small">
+                        1
+                      </div>
+                      <div class="rca-col small">
+                        7.25
+                      </div>
+                      <div class="rca-col small">
+                        -
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rca-clear"></div>
+                </div>
+              </div>
+            </div>
+   
+          </div>
+        </div>
+      </div>
+    <script>
+      function showTab(event) {
+        var sourceParent = event.parentElement.parentElement;
+        var sourceChilds = sourceParent.getElementsByClassName("rca-tab-content");
+        var sourceLinkParent = sourceParent.getElementsByClassName("rca-tab-link");
+        for (var i=0; i < sourceChilds.length; i++) {
+          sourceChilds.item(i).classList.remove("active");
+        }
+        for (var i=0; i < sourceLinkParent.length; i++) {
+          sourceLinkParent.item(i).classList.remove("active");
+        }
+        var dataTab= event.getAttribute("data-tab");
+   
+        event.classList.add("active");
+        document.getElementById(dataTab).className += ' active';
+      }
+    </script>
+      
+    </body>
+   </html>

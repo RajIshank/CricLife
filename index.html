@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CricLife - Live Cricket Score</title> 
+    <link rel="stylesheet" href="index2.css"/>
+</head>
+<style>
+    .news-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+</style>
+<body>
+    <header>
+        <h1>CricLife</h1>
+        <nav>
+            <a href="schedule.html" class="selected">Schedule</a>
+            <a href="pointstable.html">Points Table</a>
+            <a href="fantasy.html">Fantasy</a>
+            <a href="profile.html" class="profile">Profile</a>
+        </nav>
+    </header>
+
+   
+    <div class="date-buttons">
+        <button onclick="showScoreCard('yesterday')">Yesterday</button>
+        <button class="selected" onclick="showScoreCard('today')">Today</button>
+        <button onclick="showScoreCard('tomorrow')">Tomorrow</button>
+      </div>
+
+    <div class="score-card" id="yesterdayScoreCard" style="text-align: center; margin-top: 20px;">
+        <h2>CSK Won by 78 runs</h2>
+    
+        <!-- Chennai Super Kings Batting Scorecard -->
+        <div style="margin-bottom: 20px;">
+            <h3>Chennai Super Kings Batting</h3>
+            <p>Innings: 212-3 (20 Ov)</p>
+            <table style="margin: 0 auto;">
+                <tr>
+                    <th>Batter</th>
+                    <th>RB</th>
+                    <th>4s</th>
+                    <th>6s</th>
+                    <th>SR</th>
+                </tr>
+                <tr>
+                    <td>Ajinkya Rahane</td>
+                    <td>9</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>75.00</td>
+                </tr>
+                <tr>
+                    <td>Ruturaj Gaikwad (c)</td>
+                    <td>98</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>181.48</td>
+                </tr>
+                <tr>
+                    <td>Daryl Mitchell</td>
+                    <td>52</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>162.50</td>
+                </tr>
+                <tr>
+                    <td>Shivam Dube</td>
+                    <td>39*</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>195.00</td>
+                </tr>
+                <tr>
+                    <td>Dhoni (wk)</td>
+                    <td>5*</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>250.00</td>
+                </tr>
+            </table>
+        </div>
+    
+        <!-- Chennai Super Kings Bowling Scorecard -->
+        <div style="margin: 0 auto;">
+            <h3>Chennai Super Kings Bowling</h3>
+            <table style="margin: 0 auto;">
+                <tr>
+                    <th>Bowler</th>
+                    <th>O</th>
+                    <th>M</th>
+                    <th>R</th>
+                    <th>W</th>
+                    <th>NB</th>
+                    <th>WD</th>
+                    <th>Econ</th>
+                </tr>
+                <tr>
+                    <td>Deepak Chahar</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>22</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>7.30</td>
+                </tr>
+                <tr>
+                    <td>Tushar Deshpande</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>27</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>9.00</td>
+                </tr>
+                <tr>
+                    <td>Mustafizur Rahman</td>
+                    <td>2.5</td>
+                    <td>0</td>
+                    <td>19</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>6.70</td>
+                </tr>
+                <tr>
+                    <td>Ravindra Jadeja</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>22</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>5.50</td>
+                </tr>
+                <tr>
+                    <td>Shardul Thakur</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>27</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>6.80</td>
+                </tr>
+                <tr>
+                    <td>Matheesha Pathirana</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>17</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>28.50</td>
+                </tr>
+            </table>
+        </div>
+    
+        <!-- Sunrisers Hyderabad Batting Scorecard -->
+        <div style="margin-bottom: 20px;">
+            <h3>Sunrisers Hyderabad Batting</h3>
+            <p>Innings: 134-10 (18.5 Ov)</p>
+            <table style="margin: 0 auto;">
+                <tr>
+                    <th>Batter</th>
+                    <th>RB</th>
+                    <th>4s</th>
+                    <th>6s</th>
+                    <th>SR</th>
+                </tr>
+                <tr>
+                    <td>Travis Head</td>
+                    <td>13</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>85.71</td>
+                </tr>
+                <tr>
+                    <td>Abhishek Sharma</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>66.67</td>
+                </tr>
+                <tr>
+                    <td>Anmolpreet Singh</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0.00</td>
+                </tr>
+                <tr>
+                    <td>Aiden Markram</td>
+                    <td>32</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>123.08</td>
+                </tr>
+                <tr>
+                    <td>Nitish Reddy</td>
+                    <td>15</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>100.00</td>
+                </tr>
+                <tr>
+                    <td>Heinrich Klaasen (wk)</td>
+                    <td>20</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>95.24</td>
+                </tr>
+                <tr>
+                    <td>Abdul Samad (c)</td>
+                    <td>19</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>105.56</td>
+                </tr>
+                <tr>
+                    <td>Shahbaz Ahmed</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>40.00</td>
+                </tr>
+                <tr>
+                    <td>Pat Cummins (c)</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>71.43</td>
+                </tr>
+                <tr>
+                    <td>Bhuvneshwar Kumar</td>
+                    <td>4*</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>33.33</td>
+                </tr>
+                <tr>
+                    <td>Jaydev Unadkat</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>50.00</td>
+                </tr>
+            </table>
+        </div>
+    
+        <!-- Sunrisers Hyderabad Bowling Scorecard -->
+        <div style="margin-bottom: 20px;">
+            <h3>Sunrisers Hyderabad Bowling</h3>
+            <table  style="margin: 0 auto;">
+                <tr>
+                    <th>Bowler</th>
+                    <th>O</th>
+                    <th>M</th>
+                    <th>R</th>
+                    <th>W</th>
+                    <th>NB</th>
+                    <th>WD</th>
+                    <th>Econ</th>
+                </tr>
+                <tr>
+                    <td>Bhuvneshwar Kumar</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>38</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>9.50</td>
+                </tr>
+                <tr>
+                    <td>Nitish Reddy</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>8</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>8.00</td>
+                </tr>
+                <tr>
+                    <td>Shahbaz Ahmed</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>33</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>11.00</td>
+                </tr>
+                <tr>
+                    <td>T Natarajan</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>43</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>10.80</td>
+                </tr>
+                <tr>
+                    <td>Jaydev Unadkat</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>38</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>9.50</td>
+                </tr>
+                <tr>
+                    <td>Pat Cummins (c)</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>49</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>12.20</td>
+                </tr>
+            </table>
+        </div>
+    
+    </div>
+    
+
+    <div class="score-card" id="todayScoreCard">
+        <h2>Today's Scorecard</h2>
+        <div>
+            <p>Match starts at Apr 29, 14:00 GMT</p>
+            <h3>Match Info</h3>
+            <p>Match: KKR vs DC, 47th Match, Indian Premier League 2024</p>
+            <p>Date: Monday, April 29, 2024</p>
+            <p>Time: 7:30 PM</p>
+            <p>Venue: Eden Gardens, Kolkata</p>
+        </div>
+        <h3>Kolkata Knight Riders Squad</h3>
+        <p>Philip Salt (wk), Shreyas Iyer (c), Sunil Narine, Venkatesh Iyer, Andre Russell, Rinku Singh, Ramandeep Singh, Angkrish Raghuvanshi, Dushmantha Chameera, Varun Chakaravarthy, Harshit Rana, Suyash Sharma, Anukul Roy, Manish Pandey, Vaibhav Arora, Rahmanullah Gurbaz, Mitchell Starc, Allah Ghazanfar, Sakib Hussain, Sherfane Rutherford, Chetan Sakariya, Nitish Rana, Srikar Bharat</p>
+        <h3>Delhi Capitals Squad</h3>
+        <p>Rishabh Pant (c & wk), Jake Fraser-McGurk, Abishek Porel, Shai Hope, Tristan Stubbs, Axar Patel, Kumar Kushagra, Kuldeep Yadav, Lizaad Williams, Mukesh Kumar, Khaleel Ahmed, Rasikh Dar Salam, Praveen Dubey, Vicky Ostwal, Ricky Bhui, Sumit Kumar, Prithvi Shaw, Anrich Nortje, Lalit Yadav, David Warner, Yash Dhull, Swastik Chikara, Jhye Richardson, Ishant Sharma, Gulbadin Naib</p>
+    </div>
+    
+
+    <div class="score-card" id="tomorrowScoreCard">
+        <h2>Tomorrow's Scorecard</h2>
+        <div>
+            <p>Match starts at Apr 30, 14:00 GMT</p>
+            <h3>Match Info</h3>
+            <p>Match: LSG vs MI, 48th Match, Indian Premier League 2024</p>
+            <p>Date: Tuesday, April 30, 2024</p>
+            <p>Time: 7:30 PM</p>
+            <p>Venue: Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow</p>
+        </div>
+        <h3>Lucknow Super Giants Squad</h3>
+        <p>Playing: Yudhvir Singh Charak, Yash Thakur, Mayank Yadav, Manimaran Siddharth, Shivam Mavi, Ravi Bishnoi, Naveen-ul-Haq, Shamar Joseph, David Willey, Marcus Stoinis, Krunal Pandya, Kyle Mayers, Prerak Mankad, Arshin Kulkarni, Deepak Hooda, Krishnappa Gowtham, Ashton Turner, Nicholas Pooran, Devdutt Padikkal, Quinton de Kock, Ayush Badoni, KL Rahul (c), Amit Mishra, Arshad Khan, Mohsin Khan</p>
+        <h3>Mumbai Indians Squad</h3>
+        <p>Playing: Rohit Sharma, Tim David, Ishan Kishan, Vishnu Vinod, Nehal Wadhera, Suryakumar Yadav, Dewald Brevis, Piyush Chawla, Shreyas Gopal, Anshul Kamboj, Mohammad Nabi, Shams Mulani, Hardik Pandya (c), Romario Shepherd, Tilak Varma, Jasprit Bumrah, Gerald Coetzee, Kumar Kartikeya, Akash Madhwal, Arjun Tendulkar, Nuwan Thushara, Naman Dhir, Shivalik Sharma, Luke Wood, Kwena Maphaka</p>
+    </div>
+    
+
+    <div class="footer">
+        Download on the <a href="#" target="_blank"><img src="appstore.jpeg" alt="App Store"></a> | Follow us on <a href="https://www.facebook.com/Criclytics/" target="_blank"><img src="facebook.png" alt="Facebook"></a> <a href="https://www.instagram.com/criclytics/" target="_blank"><img src="instagram.jpeg" alt="Instagram"></a> | <a href="https://play.google.com/store/apps/details?id=com.criclytics.app" target="_blank">GET IT ON Google Play</a>
+    </div>
+
+    <script>
+        function showScoreCard(day) {
+            var scoreCards = document.getElementsByClassName("score-card");
+            for (var i = 0; i < scoreCards.length; i++) {
+                scoreCards[i].style.display = "none";
+            }
+    
+            var scoreCard = document.getElementById(day + "ScoreCard");
+            if (scoreCard.style.display === "block") {
+                scoreCard.style.display = "none";
+            } else {
+                scoreCard.style.display = "block";
+    
+            }
+        }
+    </script>
+    
+    <div class="news-section">
+        <h2 style="color: green;">LATEST NEWS</h2>
+        <div class="news-item">
+          <img src="news1.webp" alt="News Image">
+          <h3>Gaikwad, Deshpande help CSK climb back up to third</h3>
+        </div>
+        <div class="news-item">
+          <img src="news2.webp" alt="News Image">
+          <h3>Rabeya rues continuous top order failures</h3>
+        </div>
+        <div class="news-item">
+          <img src="news3.webp" alt="News Image">
+          <h3>Clinical India off to winning start in Bangladesh</h3>
+        </div>
+        <div class="news-item">
+          <img src="news4.webp" alt="News Image">
+          <h3>No Shakib, Mustafizur for first-three T20ls against Zimbabwe</h3>
+        </div>
+        <div class="news-item">
+          <img src="news5.webp" alt="News Image">
+          <h3>Stats: Kohli conquers spin in Titans demolition</h3>
+        </div>
+        <div class="news-item">
+          <img src="news6.webp" alt="News Image">
+          <h3>Will Jacks six-a-thon wrecks Titans</h3>
+        </div>
+        <a href="#" class="more-news" style="color: green;">More News</a>
+      </div>
+      
+    
+    
+</body>
+</html>
