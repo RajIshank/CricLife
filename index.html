@@ -1,159 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IPL Fantasy Game</title>
-  <style>
-    header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #09264e;
-  color: #fff;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-  float: left;
-  margin: 0;
-}
-
-header nav {
-  float: right;
-  margin: 10px;
-}
-
-header nav a {
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  transition: all 0.3s ease;
-  border-radius: 5px;
-  margin-left: 10px;
-}
-
-header nav a:hover {
-  background: #fff;
-  color: #09264e;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-
-#predictionForm {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 50px;
-}
-
-fieldset {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: none;
-}
-
-legend {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.team-logo {
-  width: auto;
-  height: 300px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.team-logo:hover {
-  transform: scale(1.1);
-}
-
-    #predictionForm {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin-top: 50px;
-    }
-
-    fieldset {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border: none;
-    }
-
-    legend {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .team-logo {
-      width: auto;
-      height: 300px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .team-logo:hover {
-      transform: scale(1.1);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CricLife - Live Cricket Score</title> 
+    <link rel="stylesheet" href="index2.css"/>
 </head>
+<style>
+    .news-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+</style>
 <body>
-  <header>
-    <h1 id="cricLifeTitle"><a href="index.html">CricLife</a></h1>
-    <nav>
-      <a href="schedule.html" class="selected">Schedule</a>
-      <a href="fantasy.html">Fantasy</a>
-      <a href="pointstable.html">Points Table</a>
-      <a href="profile.html" class="profile">Profile</a>
-    </nav>
-  </header>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div id="predictionForm">
-    <form>
-      <fieldset>
-        <legend>Select the Winning Team:</legend>
-        <img src="srh.jpeg" alt="Team 1 Logo" class="team-logo" onclick="changeTheme('team1')">
-        <img src="rr.jpeg" alt="Team 2 Logo" class="team-logo" onclick="changeTheme('team2')">
-      </fieldset>
-    </form>
-  </div>
+    <header>
+        <h1><a href="index.html">CricLife</a></h1>
+        <nav>
+            <a href="schedule.html" class="selected">Schedule</a>
+            <a href="pointstable.html">Points Table</a>
+            <a href="fantasy.html">Fantasy</a>
+            <a href="profile.html" class="profile">Profile</a>
+        </nav>
+    </header>
 
-  <script>
-    function changeTheme(team) {
-      if (team === 'team1') {
-        document.body.style.backgroundColor = '#E80B16';
-      } else if (team === 'team2') {
-        document.body.style.backgroundColor = '#4B22A3'; 
-      }
-    }
-  </script>
+   
+    <div class="date-buttons">
+        <button onclick="showScoreCard('yesterday')">Yesterday</button>
+        <button class="selected" onclick="showScoreCard('today')">Today</button>
+        <button onclick="showScoreCard('tomorrow')">Tomorrow</button>
+      </div>
+
+    <div class="score-card" id="yesterdayScoreCard" style="text-align: center; margin-top: 20px;">
+        <h2>PK Won by 7 wickets</h2>
+    
+        <!-- Chennai Super Kings Batting Scorecard -->
+        <div style="margin-bottom: 20px;">
+            <h3>Chennai Super Kings Batting</h3>
+            <p>Innings: 163-3 (20 Ov)</p>
+            <table style="margin: 0 auto;">
+                <tr>
+                    <th>Batter</th>
+                    <th>RB</th>
+                    <th>4s</th>
+                    <th>6s</th>
+                    <th>SR</th>
+                </tr>
+                <tr>
+                    <td>Ajinkya Rahane</td>
+                    <td>29</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>120.83</td>
+                </tr>
+                <tr>
+                    <td>Ruturaj Gaikwad (c)</td>
+                    <td>62</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>129.17</td>
+                </tr>
+                
+                <tr>
+                    <td>Sameer Rizvi</td>
+                    <td>21</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>91.30</td>
+                </tr>
+                </tr>
+            </table>
+        </div>
+    
+        <!-- Chennai Super Kings Bowling Scorecard -->
+        <div style="margin: 0 auto;">
+            <h3>Chennai Super Kings Bowling</h3>
+            <table style="margin: 0 auto;">
+                <tr>
+                    <th>Bowler</th>
+                    <th>O</th>
+                    <th>M</th>
+                    <th>R</th>
+                    <th>W</th>
+                    <th>WD</th>
+                    <th>Econ</th>
+                </tr>
+                <tr>
+                <tr>
+                    <td>Shardul Thakur</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>14</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Richard Gleeson</td>
+                    <td>3.5</td>
+                    <td>0</td>
+                    <td>30</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>7.83</td>
+                </tr>
+                <tr>
+                    <td>Shivam Dube</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>14</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>14</td>
+                </tr>
+            </table>
+        </div>
+    
+        <!-- Sunrisers Hyderabad Batting Scorecard -->
+        <div style="margin-bottom: 20px;">
+            <h3>Punjab Kings Batting</h3>
+            <p>Innings: 134-10 (18.5 Ov)</p>
+            <table style="margin: 0 auto;">
+                <tr>
+                    <th>Batter</th>
+                    <th>RB</th>
+                    <th>4s</th>
+                    <th>6s</th>
+                    <th>SR</th>
+                </tr>
+                <tr>
+                    <td>prabhsimram singh</td>
+                    <td>13</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>130.00</td>
+                </tr>
+                <tr>
+                    <td>Jonny Bairstow</td>
+                    <td>46</td>
+                    <td>7</td>
+                    <td>1</td>
+                    <td>153.33</td>
+                </tr>
+                <tr>
+                    <td>Rilee Roussouw</td>
+                    <td>43</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>186.96</td>
+                </tr>
+                <tr>
+                    <td>Shashank Singh</td>
+                    <td>25</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>96.15</td>
+                </tr>
+                <tr>
+                    <td>Sam Curran</td>
+                    <td>26</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>130.00</td>
+                </tr>
+            </table>
+        </div>
+    
+        <!-- Sunrisers Hyderabad Bowling Scorecard -->
+        <div style="margin-bottom: 20px;">
+            <h3>Sunrisers Hyderabad Bowling</h3>
+            <table  style="margin: 0 auto;">
+                <tr>
+                    <th>Bowler</th>
+                    <th>O</th>
+                    <th>M</th>
+                    <th>R</th>
+                    <th>W</th>
+                    <th>NB</th>
+                    <th>WD</th>
+                    <th>Econ</th>
+                </tr>
+                <tr>
+                    <td>Rahul Chahar</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>23</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>5.75</td>
+                </tr>
+                <tr>
+                    <td>harpreet Brar</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>17</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>4.25</td>
+                </tr>
+                <tr>
+                    <td>Kasibo Rabada</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>23</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>5.75</td>
+                </tr>
+                
+            </table>
+        </div>
+    
+    </div>
+    
+
+    <div class="score-card" id="todayScoreCard">
+        <h2>Today's Scorecard</h2>
+        <div>
+            <p>Match starts at May 02, 14:00 GMT</p>
+            <h3>Match Info</h3>
+            <p>MatchSRH vs RR, 50th Match, Indian Premier League 2024</p>
+            <p>DateThursday, May 02, 2024</p>
+            <p>Time: 7:30 PM</p>
+            <p>VenueRajiv Gandhi International Stadium, Hyderabad</p>
+        </div>
+        <h3>VenueRajiv Gandhi International Stadium, Hyderabad</h3>
+        <p>Heinrich Klaasen (wk), Pat Cummins (c), Travis Head, Abhishek Sharma, Aiden Markram, Nitish Reddy, Abdul Samad, Shahbaz Ahmed, Bhuvneshwar Kumar, Jaydev Unadkat, T Natarajan, Anmolpreet Singh, Washington Sundar, Glenn Phillips, Umran Malik, Mayank Markande, Rahul Tripathi, Mayank Agarwal, Upendra Yadav, Jhatavedh Subramanyan, Sanvir Singh, Vijayakanth Viyaskanth, Fazalhaq Farooqi, Marco Jansen, Akash Maharaj Singh</p>
+        <h3>Rajasthan Royals Squad</h3>
+        <p>Sanju Samson (c & wk), Yashasvi Jaiswal, Jos Buttler, Riyan Parag, Dhruv Jurel, Rovman Powell, Shimron Hetmyer, Ravichandran Ashwin, Trent Boult, Avesh Khan, Yuzvendra Chahal, Sandeep Sharma, Tom Kohler-Cadmore, Shubham Dubey, Tanush Kotian, Navdeep Saini, Keshav Maharaj, Nandre Burger, Kuldeep Sen, Donovan Ferreira, Abid Mushtaq, Kunal Singh Rathore</p>
+    </div>
+    
+
+    <div class="score-card" id="tomorrowScoreCard">
+        <h2>Tomorrow's Scorecard</h2>
+        <div>
+            <p>Match starts at May 04, 14:00 GMT</p>
+            <h3>Match Info</h3>
+            <p>MatchRCB vs GT, 52nd Match, Indian Premier League 2024</p>
+            <p>DateSaturday, May 04, 20244</p>
+            <p>Time: 7:30 PM</p>
+            <p>Venue: BM.Chinnaswamy Stadium, Bengaluru</p>
+        </div>
+        <h3>Royal Challengers Bengaluru Squad</h3>
+        <p>Playing: Yash Dayal, Vijaykumar Vyshak, Reece Topley, Swapnil Singh, Karn Sharma, Himanshu Sharma, Rajan Kumar, Mohammed Siraj, Alzarri Joseph, Lockie Ferguson, Mayank Dagar, Suyash Prabhudessai, Glenn Maxwell, Mahipal Lomror, Will Jacks, Cameron Green, Tom Curran, Manoj Bhandage, Akash Deep, Rajat Patidar, Virat Kohli, Dinesh Karthik, Saurav Chauhan, Anuj Rawat, Faf du Plessis (c)</p>
+        <h3>Gujarat Titans Squad</h3>
+        <p>Playing: Shubman Gill (c), David Miller, Wriddhiman Saha, Sai Sudharsan, Shahrukh Khan, Matthew Wade, Kane Williamson, Azmatullah Omarzai, Abhinav Manohar, Rashid Khan, Vijay Shankar, Rahul Tewatia, Spencer Johnson, Kartik Tyagi, Joshua Little, Darshan Nalkande, Noor Ahmad, Ravisrinivasan Sai Kishore, Mohit Sharma, Jayant Yadav, Umesh Yadav, Sushant Mishra, Sandeep Warrier, Sharath BR, Manav Suthar</p>
+    </div>
+    
+
+    <div class="footer">
+        Download on the <a href="#" target="_blank"><img src="appstore.jpeg" alt="App Store"></a> | Follow us on <a href="https://www.facebook.com/Criclytics/" target="_blank"><img src="facebook.png" alt="Facebook"></a> <a href="https://www.instagram.com/criclytics/" target="_blank"><img src="instagram.jpeg" alt="Instagram"></a> | <a href="https://play.google.com/store/apps/details?id=com.criclytics.app" target="_blank">GET IT ON Google Play</a>
+    </div>
+
+    <script>
+        function showScoreCard(day) {
+            var scoreCards = document.getElementsByClassName("score-card");
+            for (var i = 0; i < scoreCards.length; i++) {
+                scoreCards[i].style.display = "none";
+            }
+    
+            var scoreCard = document.getElementById(day + "ScoreCard");
+            if (scoreCard.style.display === "block") {
+                scoreCard.style.display = "none";
+            } else {
+                scoreCard.style.display = "block";
+    
+            }
+        }
+    </script>
+    
+    <div class="news-section">
+        <h2 style="color: green;">LATEST NEWS</h2>
+        <div class="news-item">
+          <img src="news1.webp" alt="News Image">
+          <h3>Gaikwad, Deshpande help CSK climb back up to third</h3>
+        </div>
+        <div class="news-item">
+          <img src="news2.webp" alt="News Image">
+          <h3>Rabeya rues continuous top order failures</h3>
+        </div>
+        <div class="news-item">
+          <img src="news3.webp" alt="News Image">
+          <h3>Clinical India off to winning start in Bangladesh</h3>
+        </div>
+        <div class="news-item">
+          <img src="news4.webp" alt="News Image">
+          <h3>No Shakib, Mustafizur for first-three T20ls against Zimbabwe</h3>
+        </div>
+        <div class="news-item">
+          <img src="news5.webp" alt="News Image">
+          <h3>Stats: Kohli conquers spin in Titans demolition</h3>
+        </div>
+        <div class="news-item">
+          <img src="news6.webp" alt="News Image">
+          <h3>Will Jacks six-a-thon wrecks Titans</h3>
+        </div>
+        <a href="#" class="more-news" style="color: green;">More News</a>
+      </div>
+      
+    
+    
 </body>
 </html>
